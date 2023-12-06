@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groco</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <a href="#" class="logo"><i class="fas fa-shopping-basket"></i>Groco</a>
+            <nav class="navbar">
+                <a href="#home" class="menu__link">Home</a>
+                <a href="#features" class="menu__list">Features</a>
+                <a href="#products" class="menu__list">Products</a>
+                <a href="#categories" class="menu__list">Categories</a>
+                <a href="#review" class="menu__list">Review</a>
+                <a href="#blogs" class="menu__list">Blogs</a>
+            </nav>
+            <div class="icons">
+                <div class="fas fa-bars" id="menu-btn"></div>
+                <div class="fas fa-search" id="search-btn"></div>
+                <div class="fas fa-shopping-cart" id="cart-btn"></div>
+                <div class="fas fa-user" id="login-btn"></div>
+            </div>
+            <form action="" class="search-form">
+                <input type="search" id="search-box" placeholder="Search here...">
+                <label for="search-box" class="fas fa-search"></label>
+            </form>
+            <div class="shopping__cart">
+                <div class="shopping__column">
+                    <div class="shopping__item">
+                        <img class="shopping__image" src="image/products/fruits/grapes-black.jpeg" alt="">
+                        <div class="shopping__info">
+                            <div class="item__name">grapes black</div>
+                            <div class="item__info">
+                                <div class="prise">$4.99/-</div>
+                                <div class="quantity">Qty: 1</div>
+                            </div>
+                        </div>
+                        <div class="shopping__icon">
+                            <div class="minus"><i class="fas fa-minus"></i></div>
+                            <div class="plus"><i class="fas fa-plus"></i></div>
+                            <div class="trash"><i class="fas fa-trash"></i></div>
+                        </div>
+                    </div>
+                    <div class="shopping__item">
+                        <img class="shopping__image" src="image/products/fruits/grapes-black.jpeg" alt="">
+                        <div class="shopping__info">
+                            <div class="item__name">Grapes black</div>
+                            <div class="item__info">
+                                <div class="prise">$4.99/-</div>
+                                <div class="quantity">Qty: 1</div>
+                            </div>
+                        </div>
+                        <div class="shopping__icon">
+                            <div class="minus"><i class="fas fa-minus"></i></div>
+                            <div class="plus"><i class="fas fa-plus"></i></div>
+                            <div class="trash"><i class="fas fa-trash"></i></div>
+                        </div>
+                    </div>
+                    <div class="shopping__item">
+                        <img class="shopping__image" src="image/products/vegetable/asparagus-jumbo.jpeg" alt="">
+                        <div class="shopping__info">
+                            <div class="item__name">asparagus jumbo</div>
+                            <div class="item__info">
+                                <div class="prise">$4.99/-</div>
+                                <div class="quantity">Qty: 1</div>
+                            </div>
+                        </div>
+                        <div class="shopping__icon">
+                            <div class="minus"><i class="fas fa-minus"></i></div>
+                            <div class="plus"><i class="fas fa-plus"></i></div>
+                            <div class="trash"><i class="fas fa-trash"></i></div>
+                        </div>
+                    </div>
+                    <div class="shopping__item">
+                        <img class="shopping__image" src="image/products/seafood/black-tiger-prawns.jpeg" alt="">
+                        <div class="shopping__info">
+                            <div class="item__name">black tiger prawns Medium</div>
+                            <div class="item__info">
+                                <div class="prise">$4.99/-</div>
+                                <div class="quantity">Qty: 1</div>
+                            </div>
+                        </div>
+                        <div class="shopping__icon">
+                            <div class="minus"><i class="fas fa-minus"></i></div>
+                            <div class="plus"><i class="fas fa-plus"></i></div>
+                            <div class="trash"><i class="fas fa-trash"></i></div>
+                        </div>
+                    </div>
+                    <div class="shopping__total">Total: <span id="total">$19.69/-</span></div>
+                    <button class="shopping__checkout btn">checkout</button>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <div class="home" id="home">
+                <div class="content">
+                    <h3 class="home__title title">Fresh And <span class="organic">Organic</span> Products For Your</h3>
+                    <p class="text">How your food is grown or raised can have a major impact on your mental and
+                        emotional health</p>
+                    <button href="#" class="shop__btn btn">Shop Now</button>
+                </div>
+            </div>
+            <section class="features" id="features">
+                <div class="features__container">
+                    <h2 class="features__title title" id="features">Our Features</h2>
+                    <div class="features__column">
+                        <div class="features__item">
+                            <img src="image/feature-img-1.png" alt="" class="features__icon">
+                            <h2 class="item__title">Fresh And Organic</h2>
+                            <p class="item__text">How your food is grown or raised can have a major impact on your
+                                mental and emotional health.
+                            </p>
+                            <button class="features__btn btn">Read More</button>
+                        </div>
+                        <div class="features__item">
+                            <img src="image/feature-img-2.png" alt="" class="features__icon">
+                            <h2 class="item__title">Free Delivery</h2>
+                            <p class="item__text">Free Delivery is available if you're ordering eligible items for
+                                delivery within the Denmark.
+                            </p>
+                            <button class="features__btn btn">Read More</button>
+                        </div>
+                        <div class="features__item">
+                            <img src="image/feature-img-3.png" alt="" class="features__icon">
+                            <h2 class="item__title">Easy Payments</h2>
+                            <p class="item__text">Easy payment systems very user-friendly and unique future-oriented.
+                                You can register and pay online.
+                            </p>
+                            <button class="features__btn btn">Read More</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="products" id="products">
+                <div class="swiper products__container">
+                    <div data-item class="types">
+                        <div class="products__title">Our Products</div>
+                        <nav class="types__nav nav-type">
+                            <button type="button" class="nav-type__item active">Vegitables</button>
+                            <button type="button" class="nav-type__item">Fruits</button>
+                            <button type="button" class="nav-type__item">Meat</button>
+                            <button type="button" class="nav-type__item">Seafood</button>
+                        </nav>
+                    </div>
+                    <div class="swiper-wrapper products__column">
+                        <div class="swiper-slide products__item">
+                            <img src="image/products/fruits/grapes-black.jpeg" alt="" class="products__icon">
+                            <div class="number"><span class="increment">-</span>1<span class="decrement">+</span></div>
+                            <h2 class="item__title">Fresh orange</h2>
+                            <p class="products__price">$4.99 - $10.99</p>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <button class="products__btn btn">Add To Cart</button>
+                        </div>
+                        <div class="swiper-slide products__item">
+                            <img src="image/products/fruits/mango.jpeg" alt="" class="products__icon">
+                            <div class="number"><span class="increment">-</span>1<span class="decrement">+</span></div>
+                            <h2 class="item__title">Fresh onion</h2>
+                            <p class="products__price">$4.99 - $10.99</p>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <button class="products__btn btn">Add To Cart</button>
+                        </div>
+                        <div class="swiper-slide products__item">
+                            <img src="image/products/fruits/longan.jpeg" alt="" class="products__icon">
+                            <div class="number"><span class="increment">-</span>1<span class="decrement">+</span></div>
+                            <h2 class="item__title">Fresh Meat</h2>
+                            <p class="products__price">$4.99 - $10.99</p>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <button class="products__btn btn">Add To Cart</button>
+                        </div>
+                        <div class="swiper-slide products__item">
+                            <img src="image/products/vegetable/asparagus-jumbo.jpeg" alt="" class="products__icon">
+                            <div class="number"><span class="increment">-</span>1<span class="decrement">+</span></div>
+                            <h2 class="item__title">Fresh cabbage</h2>
+                            <p class="products__price">$4.99 - $10.99</p>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <button class="products__btn btn">Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="categories" id="categories">
+                <div class="categories__container">
+                    <h2 class="categories__title title">Our Categories</h2>
+                    <div class="categories__column">
+                        <div class="categories__item">
+                            <img src="image/cat-1.png" alt="" class="categories__icon">
+                            <h2 class="item__title">Vegitables</h2>
+                            <p class="categories__discount">Upto 45% Off</p>
+                            <a href="#products" class="categories__btn btn">Shop Now</a>
+                        </div>
+                        <div class="categories__item">
+                            <img src="image/cat-2.png" alt="" class="categories__icon">
+                            <h2 class="item__title">Fresh Fruits</h2>
+                            <p class="categories__discount">Upto 45% Off</p>
+                            <a href="#products" class="categories__btn btn">Shop Now</a>
+                        </div>
+                        <div class="categories__item">
+                            <img src="image/cat-3.png" alt="" class="categories__icon">
+                            <h2 class="item__title">Dairy Products</h2>
+                            <p class="categories__discount">Upto 45% Off</p>
+                            <a href="#products" class="categories__btn btn">Shop Now</a>
+                        </div>
+                        <div class="categories__item">
+                            <img src="image/cat-4.png" alt="" class="categories__icon">
+                            <h2 class="item__title">Fresh Meat</h2>
+                            <p class="categories__discount">Upto 45% Off</p>
+                            <a href="#products" class="categories__btn btn">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="review" id="review">
+                <div class="review__title title">Customer's Review</div>
+                <div class="swiper review__container">
+                    <div class="swiper-wrapper review__column">
+                        <div class="swiper-slide review__item">
+                            <img class="review__icon" src="image/pic-1.png" alt="">
+                            <div class="review__text">Nice products, nice packaging, fast delivery. There was also a
+                                small sample in the box. It's always nice. I am so happy
+                                and satisfied.</div>
+                            <div class="review__name">Niels Pedersen</div>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                        <div class="swiper-slide review__item">
+                            <img class="review__icon" src="image/pic-2.png" alt="">
+                            <div class="review__text">Easy to order and ok delivery time - the discount was crucial.
+                                Probably not the last time I order from there. I am so happy and satisfied.</div>
+                            <div class="review__name">Jennifer Weinberg</div>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                        <div class="swiper-slide review__item">
+                            <img class="review__icon" src="image/pic-3.png" alt="">
+                            <div class="review__text">Ordered and happened to write the wrong post number, after which I
+                                called customer service and it was corrected without
+                                any problems.</div>
+                            <div class="review__name">Rick Doe</div>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                        <div class="swiper-slide review__item">
+                            <img class="review__icon" src="image/pic-4.png" alt="">
+                            <div class="review__text">Fast delivery, cheap price and excellent customer service! Can
+                                only be recommended. I am so happy and satisfied.</div>
+                            <div class="review__name">Marlene Thomas</div>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="blogs" id="blogs">
+                <div class="blog__container">
+                    <div class="blog__title title">Our Blogs</div>
+                    <div class="blog__column">
+                        <div class="blog__item">
+                            <img class="blog__image" src="image/blog-1.jpg" alt="">
+                            <div class="blog__info">
+                                <div class="blog__user">
+                                    <div class="blog__name"><i class="fas fa-user"></i>By User</div>
+                                    <div class="blog__data"><i class="fas fa-calendar"></i>1st May, 2021</div>
+                                </div>
+                                <div class="blog__subtitle">How buying organic can halp you and the world around you
+                                </div>
+                                <div class="blog__text">It is often said that we are what we eat, so it is no surprise
+                                    that organic fruit and vegetables.</div>
+                                <a href="#" class="blog__btn btn">Read More</a>
+                            </div>
+                        </div>
+                        <div class="blog__item">
+                            <img class="blog__image" src="image/blog-2.jpg" alt="">
+                            <div class="blog__user">
+                                <div class="blog__name"><i class="fas fa-user"></i>By User</div>
+                                <div class="blog__data"><i class="fas fa-calendar"></i>1st May, 2021</div>
+                            </div>
+                            <div class="blog__info">
+                                <div class="blog__subtitle">Fruit and vegetable makes you live longer, research shows
+                                </div>
+                                <div class="blog__text">The more fruit and vegetables you eat each day the healthier you
+                                    will be, a research project has proven.</div>
+                                <a href="#" class="blog__btn btn">Read More</a>
+                            </div>
+                        </div>
+                        <div class="blog__item">
+                            <img class="blog__image" src="image/blog-3.jpg" alt="">
+                            <div class="blog__user">
+                                <div class="blog__name"><i class="fas fa-user"></i>By User</div>
+                                <div class="blog__data"><i class="fas fa-calendar"></i>1st May, 2021</div>
+                            </div>
+                            <div class="blog__info">
+                                <div class="blog__subtitle">Ways to keep the cost of organic food within your budget
+                                </div>
+                                <div class="blog__text">Shop at farmers' markets. Many cities, as well as small towns,
+                                    host a weekly farmers' market, where local farmers sell
+                                    their produce.</div>
+                                <a href="#" class="blog__btn btn">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <section class="footer__container">
+                <div class="groco">
+                    <a href="#" class="footer__logo">Groco<i class="fas fa-shopping-basket"></i></a>
+                    <div class="groco__text">
+                        Lorem Ipsum Dolor, Sit Amet Consectetur Adipisicing Elit. Aliquam, Saepe.
+                    </div>
+                    <div class="share">
+                        <div href="#" class="fab fa-facebook-f"></div>
+                        <div href="#" class="fab fa-twitter"></div>
+                        <div href="#" class="fab fa-instagram"></div>
+                        <div href="#" class="fab fa-linkedin"></div>
+                    </div>
+                </div>
+                <div class="contact">
+                    <div class="subtitle">Contact Info</div>
+                    <a href="#"><i class="fas fa-phone"></i>+123-456-7890</a>
+                    <a href="#"><i class="fas fa-phone"></i>+111-222-3333</a>
+                    <a href="#"><i class="fas fa-envelope"></i>Shaikhanas@Gmail.Com</a>
+                    <a href="#"><i class="fas fa-map-marker-alt"></i>Mumbai, India - 400104</a>
+                </div>
+                <div class="links">
+                    <div class="subtitle">Quick Links</div>
+                    <a href="#home" class="link"><i class="fas fa-arrow-right"></i>Home</a>
+                    <a href="#features" class="link"><i class="fas fa-arrow-right"></i>Features</a>
+                    <a href="#products" class="link"><i class="fas fa-arrow-right"></i>Products</a>
+                    <a href="#categories" class="link"><i class="fas fa-arrow-right"></i>Categories</a>
+                    <a href="#review" class="link"><i class="fas fa-arrow-right"></i>Review</a>
+                    <a href="#blogs" class="link"><i class="fas fa-arrow-right"></i>Blogs</a>
+                </div>
+                <div class="subscribe">
+                    <div class="newsletter">Newsletter</div>
+                    <label class="subscribe__text">Subscribe For Latest Updates</label>
+                    <input class="email" type="e-mail" placeholder="Your email">
+                    <button class="subscribe__btn btn">Subscribe</button>
+                    <div>
+                        <img src="image/payment.png" alt="">
+                    </div>
+                </div>
+            </section>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
