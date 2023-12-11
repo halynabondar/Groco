@@ -775,6 +775,7 @@ body {
     margin: 15px 0;
 }
 .subscribe__text {
+    display: inline-block;
     color: var(--light-color);
     margin-bottom: 10px;
 }

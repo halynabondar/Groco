@@ -9,6 +9,7 @@
     <meta http-equiv='expires' content='0'>
     <meta http-equiv='pragma' content='no-cache'>
     <title>Groco</title>
+    <script src="js/database.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -43,8 +44,8 @@
                         <div class="shopping__info">
                             <div class="item__name">grapes black</div>
                             <div class="item__info">
-                                <div class="prise">$4.99/-</div>
-                                <div class="quantity">Qty: 1</div>
+                                <div class="prise">$4.99</div>
+                                <div class="quantity">Qty: <span id="quantity">1</span></div>
                             </div>
                         </div>
                         <div class="shopping__icon">
@@ -53,52 +54,7 @@
                             <div class="trash"><i class="fas fa-trash"></i></div>
                         </div>
                     </div>
-                    <div class="shopping__item">
-                        <img class="shopping__image" src="image/products/fruits/grapes-black.jpeg" alt="">
-                        <div class="shopping__info">
-                            <div class="item__name">Grapes black</div>
-                            <div class="item__info">
-                                <div class="prise">$4.99/-</div>
-                                <div class="quantity">Qty: 1</div>
-                            </div>
-                        </div>
-                        <div class="shopping__icon">
-                            <div class="minus"><i class="fas fa-minus"></i></div>
-                            <div class="plus"><i class="fas fa-plus"></i></div>
-                            <div class="trash"><i class="fas fa-trash"></i></div>
-                        </div>
-                    </div>
-                    <div class="shopping__item">
-                        <img class="shopping__image" src="image/products/vegetable/asparagus-jumbo.jpeg" alt="">
-                        <div class="shopping__info">
-                            <div class="item__name">asparagus jumbo</div>
-                            <div class="item__info">
-                                <div class="prise">$4.99/-</div>
-                                <div class="quantity">Qty: 1</div>
-                            </div>
-                        </div>
-                        <div class="shopping__icon">
-                            <div class="minus"><i class="fas fa-minus"></i></div>
-                            <div class="plus"><i class="fas fa-plus"></i></div>
-                            <div class="trash"><i class="fas fa-trash"></i></div>
-                        </div>
-                    </div>
-                    <div class="shopping__item">
-                        <img class="shopping__image" src="image/products/seafood/black-tiger-prawns.jpeg" alt="">
-                        <div class="shopping__info">
-                            <div class="item__name">black tiger prawns Medium</div>
-                            <div class="item__info">
-                                <div class="prise">$4.99/-</div>
-                                <div class="quantity">Qty: 1</div>
-                            </div>
-                        </div>
-                        <div class="shopping__icon">
-                            <div class="minus"><i class="fas fa-minus"></i></div>
-                            <div class="plus"><i class="fas fa-plus"></i></div>
-                            <div class="trash"><i class="fas fa-trash"></i></div>
-                        </div>
-                    </div>
-                    <div class="shopping__total">Total: <span id="total">$19.69/-</span></div>
+                    <div class="shopping__total">Total: <span id="total">$19.69</span></div>
                     <button class="shopping__checkout btn">checkout</button>
                 </div>
             </div>
@@ -148,10 +104,10 @@
                     <div data-item class="types">
                         <div class="products__title">Our Products</div>
                         <nav class="types__nav nav-type">
-                            <button type="button" class="nav-type__item active">Vegetables</button>
-                            <button type="button" class="nav-type__item">Fruits</button>
-                            <button type="button" class="nav-type__item">Meat</button>
-                            <button type="button" class="nav-type__item">Seafood</button>
+                            <button type="button" class="nav-type__item">vegetables</button>
+                            <button type="button" class="nav-type__item">fruits</button>
+                            <button type="button" class="nav-type__item">meat</button>
+                            <button type="button" class="nav-type__item">seafood</button>
                         </nav>
                     </div>
                     <div class="swiper-wrapper products__column">
@@ -231,14 +187,14 @@
                             <a href="#products" class="categories__btn btn">Shop Now</a>
                         </div>
                         <div class="categories__item">
-                            <img src="image/cat-3.png" alt="" class="categories__icon">
-                            <h2 class="item__title">Dairy Products</h2>
+                            <img src="image/cat-4.png" alt="" class="categories__icon">
+                            <h2 class="item__title">Fresh Meat</h2>
                             <p class="categories__discount">Upto 45% Off</p>
                             <a href="#products" class="categories__btn btn">Shop Now</a>
                         </div>
                         <div class="categories__item">
-                            <img src="image/cat-4.png" alt="" class="categories__icon">
-                            <h2 class="item__title">Fresh Meat</h2>
+                            <img src="image/cat-3.jpeg" alt="" class="categories__icon">
+                            <h2 class="item__title">Seafood</h2>
                             <p class="categories__discount">Upto 45% Off</p>
                             <a href="#products" class="categories__btn btn">Shop Now</a>
                         </div>
