@@ -192,7 +192,7 @@ let products = [
         quantity: 20,
     },
     {
-        name: 'Hardwicks Lamb Liver',
+        name: 'Lamb Liver',
         id: 'Item-25',
         type: 'meat',
         price: 15,
@@ -232,7 +232,7 @@ let products = [
         quantity: 20,
     },
     {
-        name: 'Eastco Salmon Fillet',
+        name: 'Salmon Fillet',
         id: 'Item-30',
         type: 'seafood',
         price: 22,
@@ -240,7 +240,7 @@ let products = [
         quantity: 20,
     },
     {
-        name: 'Pangasius Fish Fillet',
+        name: 'Pangasius Fillet',
         id: 'Item-31',
         type: 'seafood',
         price: 22,
@@ -264,3 +264,8 @@ let products = [
         quantity: 20,
     }
 ]
+
+let cartLines = [
+    {productId: "Item-14", quantity: 3},
+    {productId: "Item-22", quantity: 1},
+];

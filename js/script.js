@@ -1,4 +1,4 @@
-// swiper rewievs
+// swiper reviews
 
 const swiper = new Swiper('.swiper', {
     loop: true,
@@ -21,6 +21,8 @@ const swiper = new Swiper('.swiper', {
     },
 });
 
+
+
 // basket
 
 // increment
@@ -32,6 +34,7 @@ const increment = () => {
 
 document.querySelector('.plus').addEventListener('click', increment);
 
+
 // decrement
 const decrement = () => {
     let count = document.getElementById('quantity').innerHTML;
@@ -41,8 +44,10 @@ const decrement = () => {
 
 document.querySelector('.minus').addEventListener('click', decrement);
 
-// remove
 
+
+
+// remove
 
 let trash = document.querySelectorAll('.trash');
 trash.forEach(item => item.addEventListener('click', remove));
@@ -51,6 +56,9 @@ function remove(event){
     const removeItem = event.target.parentNode.parentNode.parentNode;
     removeItem.parentNode.removeChild(removeItem);
 }
+
+
+
 
 // searchForm
 
@@ -62,15 +70,33 @@ document.querySelector('#search-btn').onclick = () => {
     navbar.classList.remove('active');
 }
 
+// document.addEventListener('click', (e) => {
+//     const click = e.composedPath().includes(searchForm);
+//
+//     if (!click) {
+//         searchForm.style.display = 'none';
+//     }
+// })
+
+
+
 // shoppingCart
 
 let shoppingCart = document.querySelector('.shopping__cart');
 
 document.querySelector('#cart-btn').onclick = () => {
+
     shoppingCart.classList.toggle('active');
     searchForm.classList.remove('active');
     navbar.classList.remove('active');
+    if (shoppingCart.classList.contains('active')){
+        renderCart();
+    }
 }
+
+
+
+
 
 // navbar
 
@@ -82,12 +108,21 @@ document.querySelector('#menu-btn').onclick = () => {
     searchForm.classList.remove('active');
 }
 
+function fetchProduct(productId) {
+    return products.find(product => product.id === productId);
+}
+
+function fetchCartLine(productId) {
+    return cartLines.find(cartLine => cartLine.productId ===productId);
+}
+
+
 // productItem
 //  filter
 function renderProduct(productInfo){
     return `<div class="swiper-slide products__item" data-item-id="${productInfo.id}">
                             <img src="${productInfo.image}" alt="" class="products__icon">
-                            <div class="number"><span class="increment">-</span>1<span class="decrement">+</span></div>
+                            <div class="number"><span class="decrement">-</span><span class="quantity__item">1</span><span class="increment">+</span></div>
                             <h2 class="item__title">${productInfo.name}</h2>
                             <p class="products__price">$${productInfo.price}</p>
                             <div class="stars">
@@ -131,13 +166,16 @@ function renderProducts(productsToRender){
         },
         centeredSlides: true,
         breakpoints: {
-            0: {
+            400: {
                 slidesPerView: 1,
             },
-            768: {
+            730: {
                 slidesPerView: 2,
             },
-            1020: {
+            1000: {
+                slidesPerView: 3,
+            },
+            1200: {
                 slidesPerView: 4,
             },
         },
@@ -155,8 +193,114 @@ function renderProducts(productsToRender){
     }
 
     typeButtons.forEach(typeButton => {typeButton.addEventListener('click', filterProducts)})
+
+    const incrementProductCard = (event) => {
+        const productCard = event.target.parentNode.parentNode;
+        const productId = productCard.getAttribute('data-item-id');
+        const databaseProduct = fetchProduct(productId);
+        const countElement = productCard.querySelector('.quantity__item');
+
+        let countItem = countElement.innerHTML;
+
+        if (countItem < databaseProduct.quantity) {
+            countItem++;
+            countElement.innerHTML = countItem;
+        }
+    }
+
+    document.querySelectorAll('.increment').forEach(incrementButton => incrementButton.addEventListener('click', incrementProductCard));
+
+    const decrementProductCard = (event) => {
+        const productCard = event.target.parentNode.parentNode;
+
+        const countElement = productCard.querySelector('.quantity__item');
+
+        let countItem = parseInt(countElement.innerHTML);
+
+        if (countItem > 1) {
+            countItem--;
+            countElement.innerHTML = countItem;
+        }
+    }
+
+    document.querySelectorAll('.decrement').forEach(decrementButton => decrementButton.addEventListener('click', decrementProductCard));
+
+    const addToCart = (event) => {
+        const productCard = event.target.parentNode;
+        const productId = productCard.getAttribute('data-item-id');
+        const quantity = parseInt(productCard.querySelector('.quantity__item').innerHTML);
+
+        let cartLine = fetchCartLine(productId);
+
+        if (cartLine) {
+            cartLine.quantity = cartLine.quantity + quantity;
+        } else {
+            cartLines.push({
+                productId: productId,
+                quantity: quantity
+            });
+        }
+
+        renderCart();
+    }
+
+    document.querySelectorAll('.products__btn').forEach(addCartButton => addCartButton.addEventListener('click', addToCart));
 }
+
 renderProducts(products);
 
+
 // Cart
+
+
+function renderCartLine(cartLine) {
+    const databaseProduct = fetchProduct(cartLine.productId);
+
+    return `<div class="shopping__item">
+                        <img class="shopping__image" src="${databaseProduct.image}" alt="">
+                        <div class="shopping__info">
+                            <div class="item__name">${databaseProduct.name}</div>
+                            <div class="item__info">
+                                <div class="prise">$${databaseProduct.price}</div>
+                                <div class="quantity">Qty: <span id="quantity">${cartLine.quantity}</span></div>
+                            </div>
+                        </div>
+                        <div class="shopping__icon">
+                            <div class="minus"><i class="fas fa-minus"></i></div>
+                            <div class="plus"><i class="fas fa-plus"></i></div>
+                            <div class="trash"><i class="fas fa-trash"></i></div>
+                        </div>
+                    </div>`
+
+}
+
+function renderCartLines(cartLines){
+    let cartLinesHTML = '';
+
+    cartLines.forEach(cartLine => cartLinesHTML = cartLinesHTML + renderCartLine(cartLine));
+
+    return cartLinesHTML;
+}
+
+function calculateTotal(cartLines){
+    let total = 0;
+    cartLines.forEach(cartLine => {
+       const databaseProduct = fetchProduct(cartLine.productId);
+       total = total + cartLine.quantity * databaseProduct.price;
+    });
+
+    return total;
+}
+
+
+function renderCart(){
+    const cartElement = document.querySelector('.shopping__column');
+    let cartHTML = '';
+    cartHTML = cartHTML + renderCartLines(cartLines);
+    cartHTML = cartHTML + `<div class="shopping__total">Total: <span id="total">$${calculateTotal(cartLines)}</span></div>
+                    <button class="shopping__checkout btn">checkout</button>`
+    cartElement.innerHTML = cartHTML;
+}
+
+
 
