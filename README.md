@@ -10,10 +10,10 @@
 ## 🔧 Technologies Used
 
 <ul>
-  <li>HTML5: For creating the structure and content of the website.</li>
-  <li>CSS3: For styling and layout control.</li>
-  <li>JavaScript: For adding interactivity and dynamic functionality to the website.</li>
-  <li>Swiper.js: For implementing responsive, touch-enabled sliders and carousels.</li>
+  <li><b>HTML5:</b> For creating the structure and content of the website.</li>
+  <li><b>CSS3:</b> For styling and layout control.</li>
+  <li><b>JavaScript:</b> For adding interactivity and dynamic functionality to the website.</li>
+  <li><b>Swiper.js:</b> For implementing responsive, touch-enabled sliders and carousels.</li>
 </ul>
 
 ## 🌟 Key Features
